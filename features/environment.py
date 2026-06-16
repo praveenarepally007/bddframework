@@ -2,9 +2,9 @@
 from selenium import webdriver
 
 from pages.login_page import LoginPage
-from pages.bank_page import Register
-from pages.orangehrm_page import Orange_hrm
-from pages.cart_page import CartPage
+from pages.bankbdd_page import Register
+from pages.orangebdd_page import Orange_hrm
+# from pages.cart_page import CartPage
 
 
 # Load your .env file
@@ -38,10 +38,10 @@ def before_scenario(context, scenario):
 
     # Initialize your Page Objects
 
-    context.login_page = LoginPage(context.driver)
-    context.bank_page= Register(context.driver)
-    context.orangehrm_page=Orange_hrm(context.driver)
-    context.cart_page = CartPage(context.driver)
+    # context.login_page = LoginPage(context.driver)
+    # context.bankbdd_page= Register(context.driver)
+    context.orangebdd_page=Orange_hrm(context.driver)
+    # context.cart_page = CartPage(context.driver)
 def after_scenario(context, scenario):
     # Teardown driver
     if hasattr(context, 'driver'):
